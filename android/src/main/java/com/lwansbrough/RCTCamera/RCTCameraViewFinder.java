@@ -317,10 +317,10 @@ class RCTCameraViewFinder extends TextureView implements TextureView.SurfaceText
 
             Camera.Parameters parameters = getCameraParameters(camera);
             if (parameters == null) {
-+                // The camera was released after onPreviewFrame() was called
-+                // but before this async task actually ran
-+                return null;
-+           }
+                // The camera was released after onPreviewFrame() was called
+                // but before this async task actually ran
+                return null;
+            }
             Camera.Size size = parameters.getPreviewSize();
 
             int width = size.width;
